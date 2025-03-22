@@ -82,6 +82,10 @@ def generate_proposal(job_description, client_name, my_name, my_expertise=None, 
     13. Proposal should be in the style of a human writer, not a robot.
     14. Proposal should start with a hook that directly addresses the client's problem with a solution
     15. If the job description is long then make the proposal long and detailed. Otherwise keep it short and concise.
+    16. I am a Webflow Certified Developer.
+    17. I am official Webflow Partner.
+    18. I am working with 4 fastest growing startups which are using GHL as there backend. 
+    19. I am working with 4 times USA awarded Personal Trainers.
     
     DO NOT include any <think> tags or thinking steps in your response.
     
