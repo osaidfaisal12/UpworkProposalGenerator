@@ -56,6 +56,8 @@ def generate_proposal(job_description, client_name, my_name, my_expertise=None, 
     10. Include the portfolio links naturally in the text
     11. Maintain a professional tone throughout - no exclamation marks or overly casual language
     12. Focus on the value you can provide rather than emotions or excitement
+    13. Proposal should be in the style of a human writer, not a robot.
+    14. Proposal should start with a hook that directly addresses the client's problem with a solution
     
     The proposal should be easy to read, impactful, professional, and focus on solving the client's problem.
     """
