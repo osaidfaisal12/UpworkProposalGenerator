@@ -66,7 +66,7 @@ def generate_proposal(job_description, client_name, my_name, my_expertise=None, 
     
     # Generate completion
     completion = client.chat.completions.create(
-        model="llama-3.2-90b-vision-preview",
+        model="deepseek-r1-distill-llama-70b",
         messages=[
             {"role": "system", "content": "You are an expert at writing compelling job proposals for freelancers."},
             {"role": "user", "content": prompt}
