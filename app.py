@@ -34,6 +34,7 @@ with st.sidebar:
     9. Short, scannable paragraphs
     10. Portfolio links included naturally
     11. Value-focused, not emotion-focused
+                heheheheh
     """)
 
 # Create a two-column layout
