@@ -1,9 +1,32 @@
 import os
 from groq import Groq
 from dotenv import load_dotenv
+import re
 
 # Load environment variables from .env file
 load_dotenv()
+
+def clean_response(response):
+    """
+    Clean up the response from the model by removing <think> tags
+    
+    Args:
+        response: The raw response from the model
+    
+    Returns:
+        Cleaned response text
+    """
+    # Remove <think> tags if present
+    cleaned = re.sub(r'<think>.*?</think>', '', response, flags=re.DOTALL)
+    
+    # If the cleaning removed everything, return the original
+    if not cleaned.strip() and response.strip():
+        # Extract content from within <think> tags
+        think_content = re.search(r'<think>(.*?)</think>', response, re.DOTALL)
+        if think_content:
+            return think_content.group(1).strip()
+    
+    return cleaned.strip() or response
 
 def generate_proposal(job_description, client_name, my_name, my_expertise=None, portfolio_links=None):
     """
@@ -60,6 +83,8 @@ def generate_proposal(job_description, client_name, my_name, my_expertise=None, 
     14. Proposal should start with a hook that directly addresses the client's problem with a solution
     15. If the job description is long then make the proposal long and detailed. Otherwise keep it short and concise.
     
+    DO NOT include any <think> tags or thinking steps in your response.
+    
     The proposal should be easy to read, impactful, professional, and focus on solving the client's problem.
     """
     
@@ -71,7 +96,7 @@ def generate_proposal(job_description, client_name, my_name, my_expertise=None, 
     completion = client.chat.completions.create(
         model="deepseek-r1-distill-llama-70b",
         messages=[
-            {"role": "system", "content": "You are an expert at writing compelling job proposals for freelancers."},
+            {"role": "system", "content": "You are an expert at writing compelling job proposals for freelancers. Do not use <think> tags in your responses."},
             {"role": "user", "content": prompt}
         ],
         temperature=0.1,
@@ -81,8 +106,14 @@ def generate_proposal(job_description, client_name, my_name, my_expertise=None, 
         stop=None,
     )
     
-    # Return the generated proposal
-    return completion.choices[0].message.content
+    # Get the raw response
+    raw_response = completion.choices[0].message.content
+    
+    # Clean the response to handle <think> tags
+    cleaned_response = clean_response(raw_response)
+    
+    # Return the cleaned proposal
+    return cleaned_response
 
 if __name__ == "__main__":
     print("Upwork Proposal Generator using Llama 3.2")
