@@ -58,6 +58,7 @@ def generate_proposal(job_description, client_name, my_name, my_expertise=None, 
     12. Focus on the value you can provide rather than emotions or excitement
     13. Proposal should be in the style of a human writer, not a robot.
     14. Proposal should start with a hook that directly addresses the client's problem with a solution
+    15. If the job description is long then make the proposal long and detailed. Otherwise keep it short and concise.
     
     The proposal should be easy to read, impactful, professional, and focus on solving the client's problem.
     """
