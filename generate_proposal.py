@@ -67,28 +67,90 @@ def generate_proposal(job_description, client_name, my_name, my_expertise=None, 
     {portfolio_str}
     
     Follow these IMPORTANT guidelines for the proposal:
-    1. Start with a greeting using the client's name (if no name is provided, use a generic greeting)
-    2. The second line should be a compelling hook that directly addresses the client's problem with a solution
-    3. Keep the language simple, straightforward and easy to understand
-    4. Include ONE small paragraph about a recent relevant experience or case study
-    5. Include specific figures and statistics that demonstrate your success (e.g., "increased conversions by 45%")
-    6. End with a soft call-to-action (not pushy but encouraging next steps)
-    7. Keep the entire proposal under 250 words and make it conversational but professional
-    8. Highlight your expertise relevant to the job without using overly enthusiastic phrases like "I'm excited"
-    9. Keep paragraphs short and scannable
-    10. Include the portfolio links naturally in the text
-    11. Maintain a professional tone throughout - no exclamation marks or overly casual language
-    12. Focus on the value you can provide rather than emotions or excitement
-    13. Proposal should be in the style of a human writer, not a robot.
-    14. Proposal should start with a hook that directly addresses the client's problem with a solution
-    15. If the job description is long then make the proposal long and detailed. Otherwise keep it short and concise.
-    16. I am a Webflow Certified Developer.
-    17. I am official Webflow Partner.
-    18. I am working with 4 fastest growing startups which are using GHL as there backend. 
-    19. I am working with 4 times USA awarded Personal Trainers.
-    
+    STRUCTURE:
+
+    1. Start with a greeting using the client's name (if available) or a polite general greeting.  
+    2. The second line must be a compelling hook that directly addresses the client's stated problem and presents a solution.  
+    3. Keep the tone professional and conversational — no robotic or overly casual phrasing.  
+    4. Use clear and simple language.  
+    5. Add one short paragraph about a **recent, relevant** project or case study based on the job type.  
+    6. Include specific numbers that highlight your success (e.g., "increased conversions by 45%").  
+    7. End with a soft, non-pushy call-to-action (e.g., offer to discuss next steps).  
+    8. Keep total length under 250 words.  
+    9. Avoid phrases like "I'm excited", "passionate", or using exclamation marks.  
+    10. Use short, readable paragraphs.
+
+    ---
+
+    DYNAMIC RULES BASED ON JOB TYPE:
+
+    If the job involves GoHighLevel (GHL):
+    - Only mention GHL-specific experience and terminology: automations, funnel, CRM, pipeline, snapshots, onboarding workflows.  
+    - Mention that you're working with 4 of the fastest-growing startups using GHL as their backend.  
+    - Include results like: "Generated 120+ high-converting leads in 10 days", or "Saved 10+ hours weekly by automating onboarding".  
+    - Do not mention Webflow, WordPress, or other platforms.  
+    - Include a GHL snapshot or relevant GHL portfolio link if applicable.
+
+    ---
+
+    If the job is for Webflow website or landing page:
+    - Mention you're a Webflow Certified Developer and an official Webflow Partner.  
+    - Focus on SEO-friendly structure, responsiveness, performance, clean CMS, scalable builds, and fast-loading pages.  
+    - Highlight a stat like: “Helped a personal trainer generate 120+ leads in 10 days with a high-converting Webflow site”.  
+    - Do not mention WordPress, GHL, or unrelated platforms.  
+    - Embed Webflow portfolio links naturally.
+
+    ---
+
+    If the job is for WordPress:
+    - Mention you have built 80+ WordPress websites and specialize in CMS flexibility, SEO structure, mobile responsiveness, and performance optimization.  
+    - Mention examples like: “Reduced page load time by 60%” or “Increased session duration by 35%”.  
+    - Do not mention Webflow or GHL unless the client mentions them.  
+    - Include a relevant WordPress website portfolio link.
+
+    ---
+
+    If the job is CRO-focused (Conversion Rate Optimization):
+    - Mention you have created 50+ high-converting websites for real estate, coaches, consultants, and online businesses.  
+    - Emphasize keywords: user flow optimization, form improvement, heatmap testing, CTA redesign, mobile-first layout.  
+    - Use results like:  
+      - “Boosted form submissions by 40%”
+      - “Increased checkout conversion rate by 48%”
+      - “Reduced bounce rate by 32%”
+    - Portfolio example (if available): “Heres a recent CRO-focused redesign: [insert link]”
+
+    ---
+
+    If the job is general web design without a specified platform:
+    - Focus on strategy-driven design, UX, speed, mobile responsiveness, SEO, and results.  
+    - Mention working with 50+ brands and measurable impacts like “increased form submissions by 40%”.  
+    - Only include platforms if the client mentions one.
+
+    ---
+
+    PORTFOLIO LINK INSTRUCTIONS:
+    Embed links naturally:  
+    - “You can see a similar project here: [insert link]”  
+    - “Heres a quick look at a related project I recently completed: [insert link]”
+
+    ---
+
+    EXPERIENCE TO INCLUDE (ONLY WHEN RELEVANT):
+    - Webflow Certified Developer  
+    - Official Webflow Partner  
+    - Worked with 4 fastest-growing startups using GHL backend  
+    - Working with 4x USA awarded Personal Trainers  
+    - Built 80+ WordPress websites  
+    - Created 50+ high-converting websites for real estate, coaches, and e-commerce businesses
+
+    ---
+
+    Always tailor the response based on the clients description and the platform or goal they mention.  
+    Only include information, certifications, or achievements relevant to the job.  
+    Keep the proposal short, value-focused, and always human in tone.
+
     DO NOT include any <think> tags or thinking steps in your response.
-    
+
     The proposal should be easy to read, impactful, professional, and focus on solving the client's problem.
     """
     
